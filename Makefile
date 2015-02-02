@@ -19,7 +19,7 @@ run:
 	docker run -d $(DOCKERNAME) > .pidfile
 
 shell:
-	docker run -i $(DOCKERNAME) sh
+	docker run -i $(DOCKERNAME) sh 
 
 kill:
 	docker kill `cat .pidfile`
