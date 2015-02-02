@@ -1,3 +1,4 @@
 FROM busybox
-VOLUME /etc/nginx
-EXEC bash
+ADD ./logstash.json /opt/logstash/conf.d/logstash.json
+VOLUME /opt/logstash/conf.d
+ENTRYPOINT sh
